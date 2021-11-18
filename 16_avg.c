@@ -2,7 +2,8 @@
 
 int main()
 {
-    int eng, hin, sci, total, avg;
+    int eng, hin, sci, code, music, total, avg;
+    float per;
 
     printf("Enter the number of English: ");
     scanf("%d", &eng);
@@ -10,12 +11,18 @@ int main()
     scanf("%d", &hin);
     printf("Enter the number of Science: ");
     scanf("%d", &sci);
+    printf("Enter the number of Code: ");
+    scanf("%d", &code);
+    printf("Enter the number of Music: ");
+    scanf("%d", &music);
 
-    total = eng + hin + sci;
+    total = eng + hin + sci + code + music;
     printf("\n");
-    printf("The total of your number is: %d/300\n", total);
-    avg = total/3;
+    printf("The total of your number is: %d/500\n", total);
+    avg = total/5;
     printf("The avg of your number is: %d/100\n", avg);
+    per = ((float) total/500) * 100;
+    printf("The percentage of your number is: %0.2f percent.\n", per);
 
     if (avg < 0 || avg > 100)
     {
